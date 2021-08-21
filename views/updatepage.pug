@@ -1,0 +1,16 @@
+html 
+link(href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet")
+style 
+    include style.css 
+form(method="POST", action='/updatepage')
+    label Title 
+    p 
+    input(type="text" , name='title', value = data.title required)
+    p 
+    label Message 
+    p 
+    textarea(rows="5" name='message' required) = data.message 
+    p 
+    input(value='submit' type='submit')
+a(href="/index")
+ button(value="submit") Cancel and View list 

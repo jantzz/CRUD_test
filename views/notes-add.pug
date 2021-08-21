@@ -1,0 +1,16 @@
+html 
+link(href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet")
+style
+    include style.css
+form(method = 'POST' action='/notes-add')
+    label Title 
+    p 
+        input(type="text", name="title" , value="required")
+    p 
+    label Message
+    p
+        textarea(name="message" value="rows='10'" required)
+    p
+        input(value="submit" type="submit")
+a(href='/index')
+ button(value="submit") Cancel and View List    

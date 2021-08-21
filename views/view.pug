@@ -1,0 +1,21 @@
+html
+link( href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet")
+style
+    include style.css
+body
+    H1 Welcome to PogiNotes v.0
+    p
+        a(href='notes-add/')
+            button(value="submit" ) Create New  
+        ul 
+            each val,key in data
+             li= val.title
+              
+              p=val.message
+              p='Created at: ' + val.createdAt
+              p='Updated at: ' + val.updatedAt
+              a(href='delete/' + val._id)
+               button(value='submit') Delete this
+              a(href='updatepage/' + val._id)
+                button(value='submit') Update
+              hr
