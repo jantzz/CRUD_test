@@ -7,7 +7,7 @@ const NotesSchema = mongooseClient.Schema({
 const Notes = mongooseClient.model("Notes", NotesSchema);
 
 //something 
-
+//another comment 
 mongooseClient.connect("mongodb://localhost/notepadDB", {useNewUrlParser:true, useUnifiedTopology:true}, (err) =>{
     if (err){ console.log(err)}
 });
